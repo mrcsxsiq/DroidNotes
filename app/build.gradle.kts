@@ -32,7 +32,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
-        useIR = true
     }
     buildFeatures {
         compose = true
@@ -49,6 +48,11 @@ dependencies {
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.compose.ui:ui:${rootProject.extra["compose_version"]}")
     implementation ("androidx.compose.material:material-icons-extended:${rootProject.extra["compose_version"]}")
+
+    implementation("io.grpc:grpc-okhttp:1.21.1")
+    implementation("io.grpc:grpc-protobuf-lite:1.21.1")
+    implementation("io.grpc:grpc-stub:1.21.1")
+    implementation("io.grpc:grpc-netty-shade:1.21.1")
 
     implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
