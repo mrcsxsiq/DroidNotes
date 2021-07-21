@@ -1,8 +1,9 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "dev.marcos.droidnotes";
+option java_package = "dev.marcos.droidnotes.proto";
 option java_outer_classname = "NoteProto";
+option objc_class_prefix = "GRPCNotes";
 
 service NoteService {
   rpc List (Empty) returns (NoteList) {}

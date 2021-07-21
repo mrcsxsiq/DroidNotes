@@ -6,8 +6,10 @@ import com.google.protobuf.gradle.protoc
 
 plugins {
     id("com.android.application")
-    id("kotlin-android")
     id("com.google.protobuf")
+    id("kotlin-android")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -96,6 +98,12 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
     implementation("androidx.activity:activity-compose:1.3.0-rc02")
+    
+    // Room
+    implementation ("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
+    kapt ("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
+    implementation ("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
+    testImplementation ("androidx.room:room-testing:${rootProject.extra["room_version"]}")
 
     // gRPC
     compileOnly("org.apache.tomcat:annotations-api:6.0.53")
