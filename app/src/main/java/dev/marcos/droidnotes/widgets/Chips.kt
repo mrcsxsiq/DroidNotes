@@ -15,14 +15,15 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dev.marcos.droidnotes.R
+import dev.marcos.droidnotes.view.list.quicksandFamily
 
 @Composable
 fun Chip(
-    selected: Boolean,
+    selected: Boolean = true,
     text: String,
     modifier: Modifier = Modifier.padding(horizontal = 8.dp),
-    selectedIndex: (Int) -> Unit,
-    index: Int
+    selectedIndex: (Int) -> Unit = { },
+    index: Int = 0
 ) {
     Surface(
         color = when {
@@ -40,6 +41,7 @@ fun Chip(
             text = text,
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.body2,
+            fontFamily = quicksandFamily,
             color = when {
                 selected -> Color.White
                 else -> Color.Black

@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import dev.marcos.droidnotes.view.list.quicksandFamily
 
 @Composable
 fun SearchBar(placeholderLabel: String) {
@@ -29,7 +30,9 @@ fun SearchBar(placeholderLabel: String) {
             shape = RoundedCornerShape(8.dp),
             trailingIcon = { Icon(Icons.Filled.Search, "") },
             maxLines = 1,
-            placeholder = { Text(placeholderLabel) },
+            placeholder = {
+                Text(placeholderLabel, fontFamily = quicksandFamily)
+            },
             modifier = Modifier.fillMaxWidth(),
             colors = TextFieldDefaults.textFieldColors(
                 focusedIndicatorColor = Color.Transparent,

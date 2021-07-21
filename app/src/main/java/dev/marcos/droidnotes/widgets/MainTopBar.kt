@@ -13,6 +13,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -28,11 +30,17 @@ fun MainTopBar() {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            fontSize = 24.sp,
+            fontSize = 30.sp,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
+            fontFamily = caveatFamily,
             text = stringResource(id = R.string.app_name),
             color = colorResource(id = R.color.purple_500)
         )
     }
 }
+
+val caveatFamily = FontFamily(
+     Font(R.font.caveat_regular, FontWeight.Medium),
+     Font(R.font.caveat_bold, FontWeight.Bold)
+)
