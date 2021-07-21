@@ -94,6 +94,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.3.0")
     implementation("androidx.compose.ui:ui:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.material:material-icons-extended:${rootProject.extra["compose_version"]}")
+    implementation("androidx.compose.foundation:foundation:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
@@ -101,7 +102,7 @@ dependencies {
     
     // Room
     implementation ("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
-    kapt ("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
+//    kapt ("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
     implementation ("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
     testImplementation ("androidx.room:room-testing:${rootProject.extra["room_version"]}")
 
