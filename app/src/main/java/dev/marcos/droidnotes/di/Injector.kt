@@ -12,15 +12,15 @@ object Injector {
         port = 50051
     )
 
-    private fun provideNotesRemoteDataSource(service: GrpcService) = NotesDataSource(service)
-
-    private fun provideNotesRepository(dataSource: NotesDataSource) = NotesRepository(dataSource)
-
-    fun provideNotesViewModelFactory() = NotesViewModelFactory(
-        provideNotesRepository(
-            provideNotesRemoteDataSource(
-                provideGrpcService()
-            )
-        )
-    )
+//    private fun provideNotesRemoteDataSource(service: GrpcService) = NotesDataSource(service)
+//
+//    private fun provideNotesRepository(dataSource: NotesDataSource) = NotesRepository(dataSource)
+//
+//    fun provideNotesViewModelFactory() = NotesViewModelFactory(
+//        provideNotesRepository(
+//            provideNotesRemoteDataSource(
+//                provideGrpcService()
+//            )
+//        )
+//    )
 }

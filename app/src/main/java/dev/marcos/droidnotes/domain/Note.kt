@@ -13,6 +13,12 @@ data class Note(
     val title: String?,
 
     @ColumnInfo(name = "content")
-    val content: String?
+    val content: String?,
+
+    @ColumnInfo(name = "color")
+    val color: Int = 0,
+
+    @ColumnInfo(name = "height")
+    val height: Int = 200
 
 )

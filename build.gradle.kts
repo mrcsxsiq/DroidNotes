@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     val compose_version by extra("1.0.0-rc02")
-    var room_version by extra("2.3.0")
+    var room_version by extra("2.4.0-alpha03")
 
     repositories {
         google()

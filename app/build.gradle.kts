@@ -56,11 +56,8 @@ android {
 
 protobuf {
     protoc {
-        artifact = if (osdetector.os == "osx") {
-            "com.google.protobuf:protoc:3.17.3:osx-x86_64"
-        } else {
-            "com.google.protobuf:protoc:3.17.3"
-        }
+        val isMacM1 = if (osdetector.os == "osx") { ":osx-x86_64" } else { "" }
+        artifact = "com.google.protobuf:protoc:3.17.3$isMacM1"
     }
 
     plugins {
@@ -97,12 +94,14 @@ dependencies {
     implementation("androidx.compose.foundation:foundation:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
+    implementation("androidx.compose.runtime:runtime-livedata:${rootProject.extra["compose_version"]}")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
     implementation("androidx.activity:activity-compose:1.3.0-rc02")
-    
+
     // Room
     implementation ("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
-//    kapt ("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
+    kapt ("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
     implementation ("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
     testImplementation ("androidx.room:room-testing:${rootProject.extra["room_version"]}")
 
