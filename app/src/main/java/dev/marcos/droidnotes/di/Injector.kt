@@ -3,7 +3,7 @@ package dev.marcos.droidnotes.di
 import dev.marcos.droidnotes.data.NotesDataSource
 import dev.marcos.droidnotes.data.NotesRepository
 import dev.marcos.droidnotes.data.network.GrpcService
-import dev.marcos.droidnotes.view.list.viewmodel.NotesViewModelFactory
+import dev.marcos.droidnotes.view.viewmodel.NotesViewModelFactory
 
 object Injector {
 

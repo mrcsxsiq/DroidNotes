@@ -24,7 +24,7 @@ import androidx.compose.ui.text.input.ImeAction.Companion.Done
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import dev.marcos.droidnotes.R
-import dev.marcos.droidnotes.view.list.quicksandFamily
+import dev.marcos.droidnotes.view.theme.quicksandFamily
 
 @Composable
 fun SearchBar(snackbarVisibleState: MutableState<Boolean>) {

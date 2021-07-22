@@ -1,4 +1,4 @@
-package dev.marcos.droidnotes.view.list.viewmodel
+package dev.marcos.droidnotes.view.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

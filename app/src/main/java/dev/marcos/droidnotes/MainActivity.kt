@@ -1,4 +1,4 @@
-package dev.marcos.droidnotes.view.list
+package dev.marcos.droidnotes
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -42,8 +42,6 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
@@ -51,8 +49,8 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import dev.marcos.droidnotes.R
-import dev.marcos.droidnotes.view.list.viewmodel.NotesViewModel
+import dev.marcos.droidnotes.view.theme.quicksandFamily
+import dev.marcos.droidnotes.view.viewmodel.NotesViewModel
 import dev.marcos.droidnotes.widgets.BottomSheetWithCloseDialog
 import dev.marcos.droidnotes.widgets.MainFloatingActionButton
 import dev.marcos.droidnotes.widgets.MainTopBar
@@ -62,7 +60,7 @@ import dev.marcos.droidnotes.widgets.Tags
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.launch
 
-class ListActivity : ComponentActivity() {
+class MainActivity : ComponentActivity() {
 
     private lateinit var viewModel: NotesViewModel
 
@@ -101,7 +99,12 @@ class ListActivity : ComponentActivity() {
         BottomSheetScaffold(
             sheetPeekHeight = 0.dp,
             scaffoldState = scaffoldState,
-            sheetShape = BottomSheetShape,
+            sheetShape = RoundedCornerShape(
+                topStart = 20.dp,
+                topEnd = 20.dp,
+                bottomEnd = 0.dp,
+                bottomStart = 0.dp
+            ),
             sheetContent = {
                 SheetLayout(closeSheet)
             }) { paddingValues ->
@@ -195,13 +198,6 @@ fun MainLayout(openSheet: () -> Unit) {
     }
 }
 
-val quicksandFamily = FontFamily(
-    Font(R.font.quicksand_light, FontWeight.Light),
-    Font(R.font.quicksand_regular, FontWeight.Normal),
-    Font(R.font.quicksand_regular, FontWeight.Normal, FontStyle.Italic),
-    Font(R.font.quicksand_medium, FontWeight.Medium),
-    Font(R.font.quicksand_bold, FontWeight.Bold)
-)
 
 @Composable
 fun SheetLayout(onCloseBottomSheet :()->Unit) {
@@ -279,10 +275,3 @@ fun SheetLayout(onCloseBottomSheet :()->Unit) {
     }
 
 }
-
-val BottomSheetShape = RoundedCornerShape(
-    topStart = 20.dp,
-    topEnd = 20.dp,
-    bottomEnd = 0.dp,
-    bottomStart = 0.dp
-)

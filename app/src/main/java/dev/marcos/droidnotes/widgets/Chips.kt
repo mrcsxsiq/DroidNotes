@@ -15,7 +15,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import dev.marcos.droidnotes.R
-import dev.marcos.droidnotes.view.list.quicksandFamily
+import dev.marcos.droidnotes.view.theme.quicksandFamily
 
 @Composable
 fun Chip(
