@@ -3,9 +3,6 @@ package dev.marcos.droidnotes.data
 import dev.marcos.droidnotes.data.network.GrpcService
 import dev.marcos.droidnotes.domain.Note
 import io.grpc.ManagedChannel
-import io.grpc.StatusRuntimeException
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 
 class NotesDataSource(private val service: GrpcService) {
 

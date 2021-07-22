@@ -46,9 +46,7 @@ fun Chip(
                 selected -> Color.White
                 else -> Color.Black
             },
-            modifier = Modifier
-                .padding(8.dp)
-                .requiredWidth(48.dp)
+            modifier = Modifier.padding(8.dp).requiredWidth(48.dp)
         )
 
     }
