@@ -1,6 +1,6 @@
 <h1 align="center">
 <br>
-  <img src="screenshots/header.png" width="300" alt="Droid Notes">
+  <img src="screenshots/logo.png" width="300" alt="Droid Notes">
 <br>
 <br>
 Note list app built with Jetpack Compose
@@ -61,7 +61,9 @@ TODO
 ## Mad Scorecard
 
 <p align="center">
-  <img src="images/madscore.png"  > 
+  <a href="https://madscorecard.withgoogle.com/scorecard/share/4199104634/">
+    <img src="images/madscore.png"  > 
+  </a>
 </p>
 
 
