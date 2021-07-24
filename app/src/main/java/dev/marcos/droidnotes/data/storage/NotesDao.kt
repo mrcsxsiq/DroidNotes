@@ -5,12 +5,13 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Update
 import dev.marcos.droidnotes.domain.Note
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface NotesDao {
-    @Query("SELECT * FROM Notes")
+    @Query("SELECT * FROM Notes ORDER BY id DESC")
     fun getAll(): Flow<List<Note>>
 
     @Query("SELECT * FROM Notes WHERE id IN (:ids)")
@@ -19,9 +20,12 @@ interface NotesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(note: Note)
 
-    @Delete
-    fun delete(user: Note)
+    @Update
+    suspend fun update(note: Note)
 
     @Delete
-    fun deleteAll(vararg users: Note)
+    suspend fun delete(note: Note)
+
+    @Delete
+    suspend fun deleteAll(vararg users: Note)
 }

@@ -16,9 +16,13 @@ data class Note(
     val content: String?,
 
     @ColumnInfo(name = "color")
-    val color: Int = 0,
+    val color: Int? = 0,
 
     @ColumnInfo(name = "height")
-    val height: Int = 200
-
+    val height: Int? = 200
 )
+
+
+fun getNotesHeightsValues() = listOf(180, 145, 200, 240)
+
+fun getNotesColorsValues() = (0..5)

@@ -1,4 +1,4 @@
-package dev.marcos.droidnotes.view.theme
+package dev.marcos.droidnotes.ui.theme
 
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily

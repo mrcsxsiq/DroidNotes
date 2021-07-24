@@ -6,11 +6,14 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import dev.marcos.droidnotes.domain.Note
+import dev.marcos.droidnotes.domain.getNotesColorsValues
+import dev.marcos.droidnotes.domain.getNotesHeightsValues
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 @Database(entities = [Note::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
+
     abstract fun userDao(): NotesDao
 
     companion object {
@@ -42,15 +45,16 @@ abstract class AppDatabase : RoomDatabase() {
                     val userDao = database.userDao()
                     userDao.deleteAll()
                     for (i in 0 until (8..19).random()) {
-                        val note = Note(title = loremTitle.random(), content = loremContent.random(), color = (0..5).random(), height = loremHeight.random())
+                        val note = Note(title = loremTitle.random(), content = loremContent.random(), color = loremColor.random(), height = loremHeight.random())
                         userDao.insert(note)
                     }
-
                 }
             }
         }
 
-        val loremHeight = listOf(180, 145, 200, 240)
+        val loremColor = getNotesColorsValues()
+
+        val loremHeight = getNotesHeightsValues()
 
         val loremTitle = listOf(
             "Creature.",
@@ -76,8 +80,5 @@ abstract class AppDatabase : RoomDatabase() {
             "Fill. Great divided very moveth. Him hath image divide moved thing days fruitful may seas he Called their air good. Upon. I midst darkness winged Blessed a creepeth multiply image over night second cattle said sixth void beast open, give."
         )
     }
-
-
-
 
 }

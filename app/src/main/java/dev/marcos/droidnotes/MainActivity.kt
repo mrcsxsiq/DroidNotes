@@ -21,12 +21,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import dev.marcos.droidnotes.view.view.ListLayout
-import dev.marcos.droidnotes.view.view.SheetLayout
-import dev.marcos.droidnotes.view.viewmodel.NotesViewModel
-import dev.marcos.droidnotes.view.viewmodel.NotesViewModelFactory
+import dev.marcos.droidnotes.domain.Note
+import dev.marcos.droidnotes.ui.view.ListLayout
+import dev.marcos.droidnotes.ui.view.SheetLayout
+import dev.marcos.droidnotes.ui.viewmodel.NotesViewModel
+import dev.marcos.droidnotes.ui.viewmodel.NotesViewModelFactory
 import dev.marcos.droidnotes.widgets.MainFloatingActionButton
 import dev.marcos.droidnotes.widgets.MainTopBar
 import dev.marcos.droidnotes.widgets.SearchBar
@@ -40,18 +42,16 @@ class MainActivity : ComponentActivity() {
         NotesViewModelFactory((application as NotesApplication).repository)
     }
 
+    @ExperimentalComposeUiApi
     @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//
-//        viewModel = ViewModelProvider(this, Injector.provideNotesViewModelFactory()).get(
-//            NotesViewModel::class.java)
-
         setContent {
             MainContent(viewModel)
         }
     }
 
+    @ExperimentalComposeUiApi
     @ExperimentalMaterialApi
     @Composable
     fun MainContent(viewModel: NotesViewModel) {
@@ -96,7 +96,7 @@ class MainActivity : ComponentActivity() {
                 bottomStart = 0.dp
             ),
             sheetContent = {
-                SheetLayout(closeSheet)
+                SheetLayout(viewModel) { closeSheet() }
             }
         ) { paddingValues ->
             Box(Modifier.padding(paddingValues)) {

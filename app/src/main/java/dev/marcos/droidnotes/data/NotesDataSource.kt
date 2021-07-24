@@ -21,16 +21,16 @@ class NotesDataSource(
 
     }
 
-    fun insert(note: Note) {
-
+    suspend fun insert(note: Note) {
+        noteDao.insert(note = note)
     }
 
-    fun update(note: Note) {
-
+    suspend fun update(note: Note) {
+        noteDao.update(note = note)
     }
 
-    fun delete(note: Note) {
-
+    suspend fun delete(note: Note) {
+        noteDao.delete(note)
     }
 
     suspend fun transfer(note: Note?) {
