@@ -35,6 +35,7 @@ class NotesViewModel(
         }
     }
 
+
     fun insertOrUpdate(note: Note) {
         if (note.id == 0) {
             insert(note = note)
