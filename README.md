@@ -32,6 +32,8 @@ TODO
 
 TODO
 
+<img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/demo.gif" align="right" width="35%"></img>
+
 
 ## Development Roadmap
 
@@ -48,7 +50,6 @@ TODO
 - [x] [Ktlint](https://ktlint.github.io/)
 - [ ] JUnit
 - [ ] GRPC API
-
 
 ## Features
 
