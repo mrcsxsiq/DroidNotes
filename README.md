@@ -28,11 +28,7 @@ Go to the [releases page](https://github.com/mrcsxsiq/DroidNotes/releases) to do
 TODO
 
 
-## Mad Scorecard
-
-TODO
-
-<img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/demo.gif" align="right" width="35%"></img>
+<img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/demo.gif" align="right" width="30%"></img>
 
 
 ## Development Roadmap
@@ -57,6 +53,13 @@ TODO
 - [x] Update Note
 - [ ] Search
 - [ ] Tags
+
+
+## Mad Scorecard
+
+<p align="center">
+  <img src="images/madscore.png"  > 
+</p>
 
 
 ## Author
