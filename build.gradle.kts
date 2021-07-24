@@ -11,6 +11,7 @@ buildscript {
         classpath("com.android.tools.build:gradle:7.0.0-rc01")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10")
         classpath("com.google.protobuf:protobuf-gradle-plugin:0.8.17")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10")
     }
 }
 
