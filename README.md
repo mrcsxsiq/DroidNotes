@@ -41,7 +41,6 @@ Go to the [releases page](https://github.com/mrcsxsiq/DroidNotes/releases) to do
 - [x] [Coroutines](https://developer.android.com/topic/libraries/architecture/coroutines)
 - [x] [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
 - [x] [Ktlint](https://ktlint.github.io/)
-- [ ] JUnit
 - [ ] GRPC API
 
 ## Features
