@@ -28,7 +28,7 @@ Go to the [releases page](https://github.com/mrcsxsiq/DroidNotes/releases) to do
 TODO
 
 
-<img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/demo.gif" align="right" width="27%"></img>
+<img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/demo.gif" align="right" width="270"></img>
 
 
 ## Development Roadmap
