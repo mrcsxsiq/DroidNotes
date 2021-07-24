@@ -66,6 +66,9 @@ Go to the [releases page](https://github.com/mrcsxsiq/DroidNotes/releases) to do
   </a>
 </p>
 
+## Find this project useful?
+
+Support it by joining [stargazers](https://github.com/mrcsxsiq/DroidNotes/stargazers) for this repository
 
 ## Author
 
