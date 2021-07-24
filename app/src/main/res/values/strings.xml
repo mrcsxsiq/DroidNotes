@@ -12,4 +12,5 @@
     <string name="dialog_delete_content">This note is going to be deleted.</string>
     <string name="dialog_delete_confirm_button">Yes</string>
     <string name="dialog_delete_dismiss_button">No!</string>
+    <string name="empty_list">Your note list is empty   :(</string>
 </resources>

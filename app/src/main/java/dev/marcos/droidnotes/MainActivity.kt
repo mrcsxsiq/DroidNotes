@@ -78,7 +78,7 @@ class MainActivity : ComponentActivity() {
         if (snackbarVisibleState.value) {
             LaunchedEffect(channel) {
                 snackbarHostState.showSnackbar(
-                    message = "Not implemented yet :)",
+                    message = "Not implemented yet   :)",
                     duration = SnackbarDuration.Short
                 ).also {
                     snackbarVisibleState.value = false
