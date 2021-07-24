@@ -35,14 +35,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewModelScope
 import dev.marcos.droidnotes.R
 import dev.marcos.droidnotes.domain.getNotesColorsValues
 import dev.marcos.droidnotes.ui.theme.quicksandFamily
 import dev.marcos.droidnotes.ui.viewmodel.NotesViewModel
 import dev.marcos.droidnotes.widgets.StaggeredVerticalGrid
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 @ExperimentalMaterialApi
 @Composable
@@ -63,7 +61,6 @@ fun ListLayout(
         R.color.card_color_5,
         R.color.card_color_6
     )
-
 
     val positionAnimation = remember { Animatable(0f) }
     LaunchedEffect(positionAnimation) {
@@ -87,9 +84,7 @@ fun ListLayout(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Box(
-                    modifier = Modifier
-                        .height(175.dp)
-                        .width(175.dp)
+                    modifier = Modifier.height(175.dp).width(175.dp)
                 ) {
                     Image(
                         painter = painterResource(id = R.drawable.empty_state),
@@ -118,14 +113,10 @@ fun ListLayout(
                                     openSheet.invoke()
                                 },
                                 shape = RoundedCornerShape(8.dp),
-                                modifier = Modifier
-                                    .height(it.height?.dp ?: 200.dp)
-                                    .fillMaxWidth()
-                                    .padding(8.dp),
+                                modifier = Modifier.height(it.height?.dp ?: 200.dp).fillMaxWidth().padding(8.dp),
                                 elevation = 2.dp,
                                 backgroundColor = colorResource(
-                                    id = backgroundColors[it.color
-                                        ?: getNotesColorsValues().random()]
+                                    id = backgroundColors[it.color ?: getNotesColorsValues().random()]
                                 ),
                             ) {
                                 Column {

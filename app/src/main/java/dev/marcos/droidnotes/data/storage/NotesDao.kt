@@ -14,9 +14,6 @@ interface NotesDao {
     @Query("SELECT * FROM Notes ORDER BY id DESC")
     fun getAll(): Flow<List<Note>>
 
-    @Query("SELECT * FROM Notes WHERE id IN (:ids)")
-    fun loadAllByIds(ids: IntArray): List<Note>
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(note: Note)
 

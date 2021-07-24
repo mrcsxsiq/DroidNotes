@@ -107,12 +107,9 @@ fun SheetLayout(
         }
     ) {
         Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(400.dp)
-                .background(
-                    colorResource(id = backgroundColors[currentColor.value]), shape = RectangleShape
-                )
+            modifier = Modifier.fillMaxWidth().height(400.dp).background(
+                colorResource(id = backgroundColors[currentColor.value]), shape = RectangleShape
+            )
         ) {
             Column {
                 TextField(
@@ -158,9 +155,7 @@ fun SheetLayout(
                     )
                 )
                 Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp)
+                    modifier = Modifier.fillMaxWidth().padding(16.dp)
                 ) {
                     Button(
                         onClick = {
@@ -185,9 +180,7 @@ fun SheetLayout(
                             )
                             clearScreen()
                         },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(48.dp)
+                        modifier = Modifier.fillMaxWidth().height(48.dp)
                     ) {
                         Text(text = stringResource(id = R.string.label_button_save))
                     }
@@ -207,7 +200,8 @@ fun Dialog(confirm: (Boolean) -> Unit) {
             Button(
                 onClick = {
                     confirm(true)
-                }) {
+                }
+            ) {
                 Text(stringResource(id = R.string.dialog_delete_confirm_button))
             }
         },
@@ -215,7 +209,8 @@ fun Dialog(confirm: (Boolean) -> Unit) {
             Button(
                 onClick = {
                     confirm(false)
-                }) {
+                }
+            ) {
                 Text(stringResource(id = R.string.dialog_delete_dismiss_button))
             }
         }
