@@ -1,6 +1,5 @@
 package dev.marcos.droidnotes.ui.view
 
-import androidx.compose.animation.Animatable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -61,7 +60,8 @@ fun SheetLayout(
         R.color.card_color_6
     )
 
-    val openDialog = remember { mutableStateOf(false) }
+    val openDeleteDialog = remember { mutableStateOf(false) }
+    val openWarningDialog = remember { mutableStateOf(false) }
 
     val title = remember { mutableStateOf(TextFieldValue()) }
     val content = remember { mutableStateOf(TextFieldValue()) }
@@ -89,15 +89,21 @@ fun SheetLayout(
         }
     }
 
-    if (openDialog.value) {
-        Dialog {
+    if (openDeleteDialog.value) {
+        DialogDelete {
             if (it) {
                 selectedNote?.let {
                     note -> viewModel.delete(note)
                 }
                 clearScreen()
             }
-            openDialog.value = false
+            openDeleteDialog.value = false
+        }
+    }
+
+    if (openWarningDialog.value){
+        DialogWarning{
+            openWarningDialog.value = it.not()
         }
     }
 
@@ -159,7 +165,7 @@ fun SheetLayout(
                 ) {
                     Button(
                         onClick = {
-                            openDialog.value = true
+                            openDeleteDialog.value = true
                         },
                         colors = ButtonDefaults.textButtonColors(backgroundColor = Color.Red),
                         modifier = Modifier.height(48.dp)
@@ -169,16 +175,21 @@ fun SheetLayout(
                     Spacer(modifier = Modifier.padding(8.dp))
                     Button(
                         onClick = {
-                            viewModel.insertOrUpdate(
-                                Note(
-                                    id = selectedNote?.id ?: 0,
-                                    title = title.value.text,
-                                    content = content.value.text,
-                                    color = currentColor.value,
-                                    height = selectedNote?.height ?: getNotesHeightsValues().random()
+                            if (title.value.text.isBlank() or content.value.text.isBlank()){
+                               openWarningDialog.value = true
+                            } else {
+                                viewModel.insertOrUpdate(
+                                    Note(
+                                        id = selectedNote?.id ?: 0,
+                                        title = title.value.text,
+                                        content = content.value.text,
+                                        color = currentColor.value,
+                                        height = selectedNote?.height
+                                            ?: getNotesHeightsValues().random()
+                                    )
                                 )
-                            )
-                            clearScreen()
+                                clearScreen()
+                            }
                         },
                         modifier = Modifier.fillMaxWidth().height(48.dp)
                     ) {
@@ -191,7 +202,7 @@ fun SheetLayout(
 }
 
 @Composable
-fun Dialog(confirm: (Boolean) -> Unit) {
+fun DialogDelete(confirm: (Boolean) -> Unit) {
     AlertDialog(
         onDismissRequest = { confirm(false) },
         title = { Text(text = stringResource(id = R.string.dialog_delete_title)) },
@@ -212,6 +223,22 @@ fun Dialog(confirm: (Boolean) -> Unit) {
                 }
             ) {
                 Text(stringResource(id = R.string.dialog_delete_dismiss_button))
+            }
+        }
+    )
+}
+
+@Composable
+fun DialogWarning(confirm: (Boolean) -> Unit) {
+    AlertDialog(
+        onDismissRequest = { confirm(true) },
+        title = { Text(text = stringResource(id = R.string.dialog_warning_title)) },
+        text = { Text(stringResource(id = R.string.dialog_warning_content)) },
+        confirmButton = {
+            Button(
+                onClick = { confirm(true)  }
+            ) {
+                Text(stringResource(id = R.string.dialog_warning_confirm_button))
             }
         }
     )

@@ -8,6 +8,9 @@
     <string name="label_button_save">Save</string>
     <string name="label_sheet_title">Title</string>
     <string name="label_sheet_content">Content</string>
+    <string name="dialog_warning_title">Hey</string>
+    <string name="dialog_warning_content">You can\'t save a note without title or content</string>
+    <string name="dialog_warning_confirm_button">ok</string>
     <string name="dialog_delete_title">Are you sure?</string>
     <string name="dialog_delete_content">This note is going to be deleted.</string>
     <string name="dialog_delete_confirm_button">Yes</string>
