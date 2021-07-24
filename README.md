@@ -24,9 +24,9 @@ Go to the [releases page](https://github.com/mrcsxsiq/DroidNotes/releases) to do
 
 
 ## Architecture
-
-TODO
-
+<p align="center">
+  <img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/mvvm.png" width="570">
+</p>
 
 <img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/demo.gif" align="right" width="270"></img>
 
