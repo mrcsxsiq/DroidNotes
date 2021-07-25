@@ -12,6 +12,8 @@ plugins {
     id("kotlin-parcelize")
 }
 
+apply(from = "../ktlint.gradle.kts")
+
 android {
     compileSdk = 30
     buildToolsVersion = "30.0.3"
