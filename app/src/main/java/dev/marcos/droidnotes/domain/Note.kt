@@ -22,7 +22,6 @@ data class Note(
     val height: Int? = 200
 )
 
-
 fun getNotesHeightsValues() = listOf(180, 145, 200, 240)
 
 fun getNotesColorsValues() = (0..5)

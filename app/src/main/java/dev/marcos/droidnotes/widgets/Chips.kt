@@ -35,9 +35,9 @@ fun Chip(
             else -> Color.LightGray
         },
         shape = CircleShape,
-        modifier = modifier.clickable  { selectedIndex(index) },
+        modifier = modifier.clickable { selectedIndex(index) },
     ) {
-       Text(
+        Text(
             text = text,
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.body2,
@@ -48,6 +48,5 @@ fun Chip(
             },
             modifier = Modifier.padding(8.dp).requiredWidth(48.dp)
         )
-
     }
 }

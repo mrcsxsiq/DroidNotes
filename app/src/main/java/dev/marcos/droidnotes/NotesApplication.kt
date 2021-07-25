@@ -21,7 +21,6 @@ class NotesApplication : Application() {
     }
 
     val repository by lazy {
-        NotesRepository(  dataSource )
+        NotesRepository(dataSource)
     }
-
 }

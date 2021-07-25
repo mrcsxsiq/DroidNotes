@@ -2,9 +2,9 @@ package dev.marcos.droidnotes.widgets
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.unit.Dp
 import kotlin.math.ceil
-import androidx.compose.ui.layout.Layout
 
 @Composable
 fun StaggeredVerticalGrid(

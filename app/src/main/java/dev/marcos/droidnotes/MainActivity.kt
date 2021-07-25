@@ -24,7 +24,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import dev.marcos.droidnotes.domain.Note
 import dev.marcos.droidnotes.ui.view.ListLayout
 import dev.marcos.droidnotes.ui.view.SheetLayout
 import dev.marcos.droidnotes.ui.viewmodel.NotesViewModel

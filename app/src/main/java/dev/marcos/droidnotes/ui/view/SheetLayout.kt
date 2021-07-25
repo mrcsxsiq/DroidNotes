@@ -85,7 +85,7 @@ fun SheetLayout(
         viewModel.selectedNote.value = null
         viewModel.viewModelScope.launch {
             delay(250L)
-            currentColor.value =  getNotesColorsValues().random()
+            currentColor.value = getNotesColorsValues().random()
         }
     }
 
@@ -93,7 +93,8 @@ fun SheetLayout(
         DialogDelete {
             if (it) {
                 selectedNote?.let {
-                    note -> viewModel.delete(note)
+                    note ->
+                    viewModel.delete(note)
                 }
                 clearScreen()
             }
@@ -101,8 +102,8 @@ fun SheetLayout(
         }
     }
 
-    if (openWarningDialog.value){
-        DialogWarning{
+    if (openWarningDialog.value) {
+        DialogWarning {
             openWarningDialog.value = it.not()
         }
     }
@@ -175,8 +176,8 @@ fun SheetLayout(
                     Spacer(modifier = Modifier.padding(8.dp))
                     Button(
                         onClick = {
-                            if (title.value.text.isBlank() or content.value.text.isBlank()){
-                               openWarningDialog.value = true
+                            if (title.value.text.isBlank() or content.value.text.isBlank()) {
+                                openWarningDialog.value = true
                             } else {
                                 viewModel.insertOrUpdate(
                                     Note(
@@ -236,7 +237,7 @@ fun DialogWarning(confirm: (Boolean) -> Unit) {
         text = { Text(stringResource(id = R.string.dialog_warning_content)) },
         confirmButton = {
             Button(
-                onClick = { confirm(true)  }
+                onClick = { confirm(true) }
             ) {
                 Text(stringResource(id = R.string.dialog_warning_confirm_button))
             }

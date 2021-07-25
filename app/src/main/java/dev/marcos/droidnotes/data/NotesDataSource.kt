@@ -18,7 +18,6 @@ class NotesDataSource(
     }
 
     fun get(note: Note) {
-
     }
 
     suspend fun insert(note: Note) {

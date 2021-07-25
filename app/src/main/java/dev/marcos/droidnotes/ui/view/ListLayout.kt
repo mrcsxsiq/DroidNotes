@@ -130,8 +130,10 @@ fun ListLayout(
                                         .padding(8.dp),
                                     elevation = 2.dp,
                                     backgroundColor = colorResource(
-                                        id = backgroundColors[it.color
-                                            ?: getNotesColorsValues().random()]
+                                        id = backgroundColors[
+                                            it.color
+                                                ?: getNotesColorsValues().random()
+                                        ]
                                     ),
                                 ) {
                                     Column {
