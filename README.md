@@ -1,7 +1,5 @@
 <h1 align="center">
-<br>
   <img src="images/logo.png" width="300" alt="Droid Notes">
-<br>
 <br>
 Note list app built with Jetpack Compose
 </h1>
