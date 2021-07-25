@@ -28,7 +28,16 @@ Go to the [releases page](https://github.com/mrcsxsiq/DroidNotes/releases) to do
   <img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/mvvm.png" width="570">
 </p>
 
+
+## Features
 <img src="https://github.com/mrcsxsiq/DroidNotes/blob/master/images/demo.gif" align="right" width="270"></img>
+- [x] Home
+- [x] Details
+- [x] Add Note
+- [x] Delete Note
+- [x] Update Note
+- [ ] Search
+- [ ] Tags
 
 
 ## Development Roadmap
@@ -42,20 +51,7 @@ Go to the [releases page](https://github.com/mrcsxsiq/DroidNotes/releases) to do
 - [x] [Gradle Kotlin DSL](https://docs.gradle.org/current/userguide/kotlin_dsl.html)
 - [x] [Ktlint](https://ktlint.github.io/)
 - [ ] GRPC API
-
-## Features
-
-- [x] Home
-- [x] Details
-- [x] Add Note
-- [x] Delete Note
-- [x] Update Note
-- [ ] Search
-- [ ] Tags
-
-
-
-
+- [ ] JUnit
 
 ## Mad Scorecard
 
