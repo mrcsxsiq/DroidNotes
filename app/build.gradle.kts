@@ -110,7 +110,7 @@ dependencies {
 
     // gRPC
     compileOnly("org.apache.tomcat:annotations-api:6.0.53")
-    implementation("io.grpc:grpc-okhttp:1.39.0")
+    implementation("io.grpc:grpc-okhttp:1.41.0")
     implementation("io.grpc:grpc-protobuf-lite:1.39.0")
     implementation("io.grpc:grpc-stub:1.39.0")
 
