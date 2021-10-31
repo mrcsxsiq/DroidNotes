@@ -1,0 +1,2 @@
+- name: Setup reviewdog
+  uses: reviewdog/action-setup@v1.0.3
