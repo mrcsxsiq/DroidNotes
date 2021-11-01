@@ -99,11 +99,11 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:${rootProject.extra["compose_version"]}")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
-    implementation("androidx.activity:activity-compose:1.4.0")
+       implementation("androidx.activity:activity-compose:1.4.0")
     implementation("com.google.accompanist:accompanist-swiperefresh:0.20.0")
 
     // Room
-    implementation ("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
+      implementation ("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
     kapt ("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
     implementation ("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
     testImplementation ("androidx.room:room-testing:${rootProject.extra["room_version"]}")
