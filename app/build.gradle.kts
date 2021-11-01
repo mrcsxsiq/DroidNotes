@@ -41,6 +41,8 @@ android {
         }
     }
     compileOptions {
+        
+        
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -58,7 +60,7 @@ android {
 
 protobuf {
     protoc {
-        val isMacM1 = if (osdetector.os == "osx") { ":osx-x86_64" } else { "" }
+            val isMacM1 = if (osdetector.os == "osx") { ":osx-x86_64" } else { "" }
         artifact = "com.google.protobuf:protoc:3.17.3$isMacM1"
     }
 
