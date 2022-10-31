@@ -99,7 +99,7 @@ dependencies {
     implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
         implementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.runtime:runtime-livedata:${rootProject.extra["compose_version"]}")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
        implementation("androidx.activity:activity-compose:1.4.0")
     implementation("com.google.accompanist:accompanist-swiperefresh:0.20.0")
