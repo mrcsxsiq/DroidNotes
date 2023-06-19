@@ -15,13 +15,13 @@ plugins {
 apply(from = "../ktlint.gradle.kts")
 
 android {
-    compileSdk = 30
+    compileSdk = 33
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
         applicationId = "dev.marcos.droidnotes"
         minSdk = 21
-        targetSdk = 30
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
