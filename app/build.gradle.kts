@@ -41,8 +41,6 @@ android {
         }
     }
     compileOptions {
-        
-        
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -60,7 +58,7 @@ android {
 
 protobuf {
     protoc {
-            val isMacM1 = if (osdetector.os == "osx") { ":osx-x86_64" } else { "" }
+        val isMacM1 = if (osdetector.os == "osx") { ":osx-x86_64" } else { "" }
         artifact = "com.google.protobuf:protoc:3.17.3$isMacM1"
     }
 
@@ -97,15 +95,15 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.foundation:foundation:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
-        implementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
+    implementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.runtime:runtime-livedata:${rootProject.extra["compose_version"]}")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
-       implementation("androidx.activity:activity-compose:1.6.1")
+    implementation("androidx.activity:activity-compose:1.6.1")
     implementation("com.google.accompanist:accompanist-swiperefresh:0.20.0")
 
     // Room
-      implementation ("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
+    implementation ("androidx.room:room-runtime:${rootProject.extra["room_version"]}")
     kapt ("androidx.room:room-compiler:${rootProject.extra["room_version"]}")
     implementation ("androidx.room:room-ktx:${rootProject.extra["room_version"]}")
     testImplementation ("androidx.room:room-testing:${rootProject.extra["room_version"]}")
